@@ -1,0 +1,572 @@
+PyDev console: starting.
+Python 3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)] on win32
+runfile('D:/HWDB1_1/train.py', wdir='D:/HWDB1_1')
+训练集数据: 236694
+测试集数据: 59092
+网络结构：
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1            [-1, 8, 64, 64]             216
+       BatchNorm2d-2            [-1, 8, 64, 64]              16
+             ReLU6-3            [-1, 8, 64, 64]               0
+            Conv2d-4           [-1, 16, 64, 64]           1,152
+       BatchNorm2d-5           [-1, 16, 64, 64]              32
+             ReLU6-6           [-1, 16, 64, 64]               0
+            Conv2d-7           [-1, 16, 64, 64]             144
+       BatchNorm2d-8           [-1, 16, 64, 64]              32
+             ReLU6-9           [-1, 16, 64, 64]               0
+           Conv2d-10           [-1, 32, 64, 64]             512
+      BatchNorm2d-11           [-1, 32, 64, 64]              64
+           Conv2d-12           [-1, 32, 32, 32]             288
+      BatchNorm2d-13           [-1, 32, 32, 32]              64
+            ReLU6-14           [-1, 32, 32, 32]               0
+           Conv2d-15           [-1, 32, 32, 32]           1,024
+      BatchNorm2d-16           [-1, 32, 32, 32]              64
+           Conv2d-17           [-1, 32, 32, 32]             288
+      BatchNorm2d-18           [-1, 32, 32, 32]              64
+            ReLU6-19           [-1, 32, 32, 32]               0
+           Conv2d-20           [-1, 64, 32, 32]           2,048
+      BatchNorm2d-21           [-1, 64, 32, 32]             128
+           Conv2d-22           [-1, 64, 16, 16]             576
+      BatchNorm2d-23           [-1, 64, 16, 16]             128
+            ReLU6-24           [-1, 64, 16, 16]               0
+           Conv2d-25           [-1, 64, 16, 16]           4,096
+      BatchNorm2d-26           [-1, 64, 16, 16]             128
+           Conv2d-27           [-1, 64, 16, 16]             576
+      BatchNorm2d-28           [-1, 64, 16, 16]             128
+            ReLU6-29           [-1, 64, 16, 16]               0
+           Conv2d-30          [-1, 128, 16, 16]           8,192
+      BatchNorm2d-31          [-1, 128, 16, 16]             256
+           Conv2d-32          [-1, 128, 16, 16]           1,152
+      BatchNorm2d-33          [-1, 128, 16, 16]             256
+            ReLU6-34          [-1, 128, 16, 16]               0
+           Conv2d-35          [-1, 128, 16, 16]          16,384
+      BatchNorm2d-36          [-1, 128, 16, 16]             256
+           Conv2d-37          [-1, 128, 16, 16]           1,152
+      BatchNorm2d-38          [-1, 128, 16, 16]             256
+            ReLU6-39          [-1, 128, 16, 16]               0
+           Conv2d-40          [-1, 128, 16, 16]          16,384
+      BatchNorm2d-41          [-1, 128, 16, 16]             256
+           Conv2d-42          [-1, 128, 16, 16]           1,152
+      BatchNorm2d-43          [-1, 128, 16, 16]             256
+            ReLU6-44          [-1, 128, 16, 16]               0
+           Conv2d-45          [-1, 128, 16, 16]          16,384
+      BatchNorm2d-46          [-1, 128, 16, 16]             256
+           Conv2d-47          [-1, 128, 16, 16]           1,152
+      BatchNorm2d-48          [-1, 128, 16, 16]             256
+            ReLU6-49          [-1, 128, 16, 16]               0
+           Conv2d-50          [-1, 128, 16, 16]          16,384
+      BatchNorm2d-51          [-1, 128, 16, 16]             256
+           Conv2d-52            [-1, 128, 8, 8]           1,152
+      BatchNorm2d-53            [-1, 128, 8, 8]             256
+            ReLU6-54            [-1, 128, 8, 8]               0
+           Conv2d-55            [-1, 256, 8, 8]          32,768
+      BatchNorm2d-56            [-1, 256, 8, 8]             512
+           Conv2d-57            [-1, 256, 8, 8]           2,304
+      BatchNorm2d-58            [-1, 256, 8, 8]             512
+            ReLU6-59            [-1, 256, 8, 8]               0
+           Conv2d-60            [-1, 256, 8, 8]          65,536
+      BatchNorm2d-61            [-1, 256, 8, 8]             512
+           Conv2d-62            [-1, 256, 8, 8]           2,304
+      BatchNorm2d-63            [-1, 256, 8, 8]             512
+            ReLU6-64            [-1, 256, 8, 8]               0
+           Conv2d-65            [-1, 256, 8, 8]          65,536
+      BatchNorm2d-66            [-1, 256, 8, 8]             512
+           Conv2d-67            [-1, 256, 4, 4]           2,304
+      BatchNorm2d-68            [-1, 256, 4, 4]             512
+            ReLU6-69            [-1, 256, 4, 4]               0
+           Conv2d-70            [-1, 512, 4, 4]         131,072
+      BatchNorm2d-71            [-1, 512, 4, 4]           1,024
+           Conv2d-72            [-1, 512, 4, 4]           4,608
+      BatchNorm2d-73            [-1, 512, 4, 4]           1,024
+            ReLU6-74            [-1, 512, 4, 4]               0
+           Conv2d-75            [-1, 512, 4, 4]         262,144
+      BatchNorm2d-76            [-1, 512, 4, 4]           1,024
+           Linear-77                 [-1, 1024]       8,389,632
+          Dropout-78                 [-1, 1024]               0
+             ReLU-79                 [-1, 1024]               0
+           Linear-80                 [-1, 3922]       4,020,050
+================================================================
+Total params: 13,078,218
+Trainable params: 13,078,218
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.05
+Forward/backward pass size (MB): 17.52
+Params size (MB): 49.89
+Estimated Total Size (MB): 67.46
+----------------------------------------------------------------
+epoch 0 开始训练...
+epoch: 0, batch: 100 loss: 8.235, acc: 0.0500
+epoch: 0, batch: 200 loss: 8.043, acc: 0.1300
+epoch: 0, batch: 300 loss: 7.565, acc: 0.1400
+epoch: 0, batch: 400 loss: 7.144, acc: 0.1600
+epoch: 0, batch: 500 loss: 6.908, acc: 0.3200
+epoch: 0, batch: 600 loss: 6.684, acc: 0.3600
+epoch: 0, batch: 700 loss: 6.461, acc: 0.5600
+epoch: 0, batch: 800 loss: 6.285, acc: 0.8600
+epoch: 0, batch: 900 loss: 6.075, acc: 1.6000
+epoch: 0, batch: 1000 loss: 5.816, acc: 2.6900
+epoch: 0, batch: 1100 loss: 5.505, acc: 4.2900
+epoch: 0, batch: 1200 loss: 5.185, acc: 6.1600
+epoch: 0, batch: 1300 loss: 4.874, acc: 7.8600
+epoch: 0, batch: 1400 loss: 4.556, acc: 10.5700
+epoch: 0, batch: 1500 loss: 4.255, acc: 13.3300
+epoch: 0, batch: 1600 loss: 3.980, acc: 16.1700
+epoch: 0, batch: 1700 loss: 3.700, acc: 20.5400
+epoch: 0, batch: 1800 loss: 3.449, acc: 23.1200
+epoch: 0, batch: 1900 loss: 3.259, acc: 25.9400
+epoch: 0, batch: 2000 loss: 3.063, acc: 29.6000
+epoch: 0, batch: 2100 loss: 2.884, acc: 32.4200
+epoch: 0, batch: 2200 loss: 2.701, acc: 36.1700
+epoch: 0, batch: 2300 loss: 2.528, acc: 39.2900
+epoch 0 开始验证...
+correct number:  23929
+totol number: 59092
+第0个epoch的识别准确率为：40%
+epoch0 结束, 正在保存模型...
+epoch 1 开始训练...
+epoch: 1, batch: 100 loss: 2.300, acc: 43.6800
+epoch: 1, batch: 200 loss: 2.185, acc: 45.7600
+epoch: 1, batch: 300 loss: 2.057, acc: 48.7400
+epoch: 1, batch: 400 loss: 1.990, acc: 49.8200
+epoch: 1, batch: 500 loss: 1.865, acc: 53.0000
+epoch: 1, batch: 600 loss: 1.781, acc: 54.7900
+epoch: 1, batch: 700 loss: 1.719, acc: 55.9200
+epoch: 1, batch: 800 loss: 1.604, acc: 58.8100
+epoch: 1, batch: 900 loss: 1.555, acc: 59.9300
+epoch: 1, batch: 1000 loss: 1.484, acc: 61.1500
+epoch: 1, batch: 1100 loss: 1.453, acc: 62.0900
+epoch: 1, batch: 1200 loss: 1.359, acc: 65.1100
+epoch: 1, batch: 1300 loss: 1.313, acc: 65.6100
+epoch: 1, batch: 1400 loss: 1.287, acc: 66.2400
+epoch: 1, batch: 1500 loss: 1.255, acc: 67.6100
+epoch: 1, batch: 1600 loss: 1.204, acc: 67.9900
+epoch: 1, batch: 1700 loss: 1.175, acc: 68.6800
+epoch: 1, batch: 1800 loss: 1.150, acc: 69.4300
+epoch: 1, batch: 1900 loss: 1.108, acc: 70.6000
+epoch: 1, batch: 2000 loss: 1.082, acc: 70.8600
+epoch: 1, batch: 2100 loss: 1.029, acc: 72.3300
+epoch: 1, batch: 2200 loss: 0.992, acc: 73.5000
+epoch: 1, batch: 2300 loss: 1.001, acc: 72.7900
+epoch 1 开始验证...
+correct number:  42506
+totol number: 59092
+第1个epoch的识别准确率为：71%
+epoch1 结束, 正在保存模型...
+epoch 2 开始训练...
+epoch: 2, batch: 100 loss: 0.905, acc: 75.9000
+epoch: 2, batch: 200 loss: 0.887, acc: 75.9500
+epoch: 2, batch: 300 loss: 0.891, acc: 75.2900
+epoch: 2, batch: 400 loss: 0.862, acc: 76.7500
+epoch: 2, batch: 500 loss: 0.853, acc: 76.1800
+epoch: 2, batch: 600 loss: 0.854, acc: 76.9700
+epoch: 2, batch: 700 loss: 0.818, acc: 77.6600
+epoch: 2, batch: 800 loss: 0.812, acc: 78.0100
+epoch: 2, batch: 900 loss: 0.784, acc: 78.8300
+epoch: 2, batch: 1000 loss: 0.795, acc: 77.8700
+epoch: 2, batch: 1100 loss: 0.778, acc: 78.4500
+epoch: 2, batch: 1200 loss: 0.766, acc: 79.0300
+epoch: 2, batch: 1300 loss: 0.752, acc: 79.3500
+epoch: 2, batch: 1400 loss: 0.732, acc: 79.7300
+epoch: 2, batch: 1500 loss: 0.731, acc: 80.2900
+epoch: 2, batch: 1600 loss: 0.712, acc: 80.2700
+epoch: 2, batch: 1700 loss: 0.697, acc: 80.9000
+epoch: 2, batch: 1800 loss: 0.684, acc: 81.1600
+epoch: 2, batch: 1900 loss: 0.688, acc: 81.0600
+epoch: 2, batch: 2000 loss: 0.699, acc: 80.6900
+epoch: 2, batch: 2100 loss: 0.682, acc: 81.0700
+epoch: 2, batch: 2200 loss: 0.672, acc: 81.3800
+epoch: 2, batch: 2300 loss: 0.675, acc: 81.6600
+epoch 2 开始验证...
+correct number:  47087
+totol number: 59092
+第2个epoch的识别准确率为：79%
+epoch2 结束, 正在保存模型...
+epoch 3 开始训练...
+epoch: 3, batch: 100 loss: 0.583, acc: 83.5900
+epoch: 3, batch: 200 loss: 0.603, acc: 83.1600
+epoch: 3, batch: 300 loss: 0.590, acc: 83.4900
+epoch: 3, batch: 400 loss: 0.583, acc: 83.8300
+epoch: 3, batch: 500 loss: 0.570, acc: 84.2700
+epoch: 3, batch: 600 loss: 0.564, acc: 84.2300
+epoch: 3, batch: 700 loss: 0.573, acc: 84.3900
+epoch: 3, batch: 800 loss: 0.576, acc: 83.7800
+epoch: 3, batch: 900 loss: 0.580, acc: 83.8100
+epoch: 3, batch: 1000 loss: 0.568, acc: 83.8000
+epoch: 3, batch: 1100 loss: 0.562, acc: 84.2500
+epoch: 3, batch: 1200 loss: 0.536, acc: 84.8200
+epoch: 3, batch: 1300 loss: 0.564, acc: 83.5600
+epoch: 3, batch: 1400 loss: 0.553, acc: 84.6200
+epoch: 3, batch: 1500 loss: 0.544, acc: 84.1700
+epoch: 3, batch: 1600 loss: 0.549, acc: 84.4100
+epoch: 3, batch: 1700 loss: 0.559, acc: 84.4900
+epoch: 3, batch: 1800 loss: 0.563, acc: 83.7500
+epoch: 3, batch: 1900 loss: 0.534, acc: 84.5900
+epoch: 3, batch: 2000 loss: 0.510, acc: 85.5000
+epoch: 3, batch: 2100 loss: 0.544, acc: 84.4300
+epoch: 3, batch: 2200 loss: 0.525, acc: 84.7700
+epoch: 3, batch: 2300 loss: 0.514, acc: 85.6600
+epoch 3 开始验证...
+correct number:  48819
+totol number: 59092
+第3个epoch的识别准确率为：82%
+epoch3 结束, 正在保存模型...
+epoch 4 开始训练...
+epoch: 4, batch: 100 loss: 0.469, acc: 86.7600
+epoch: 4, batch: 200 loss: 0.454, acc: 86.7800
+epoch: 4, batch: 300 loss: 0.489, acc: 86.0900
+epoch: 4, batch: 400 loss: 0.459, acc: 86.5400
+epoch: 4, batch: 500 loss: 0.468, acc: 86.7200
+epoch: 4, batch: 600 loss: 0.469, acc: 86.4500
+epoch: 4, batch: 700 loss: 0.450, acc: 87.1000
+epoch: 4, batch: 800 loss: 0.442, acc: 87.1900
+epoch: 4, batch: 900 loss: 0.449, acc: 87.6800
+epoch: 4, batch: 1000 loss: 0.450, acc: 86.9500
+epoch: 4, batch: 1100 loss: 0.454, acc: 87.4200
+epoch: 4, batch: 1200 loss: 0.453, acc: 87.2600
+epoch: 4, batch: 1300 loss: 0.464, acc: 86.6600
+epoch: 4, batch: 1400 loss: 0.442, acc: 87.1800
+epoch: 4, batch: 1500 loss: 0.446, acc: 86.9600
+epoch: 4, batch: 1600 loss: 0.440, acc: 87.2600
+epoch: 4, batch: 1700 loss: 0.433, acc: 87.3300
+epoch: 4, batch: 1800 loss: 0.438, acc: 87.1800
+epoch: 4, batch: 1900 loss: 0.454, acc: 87.0600
+epoch: 4, batch: 2000 loss: 0.439, acc: 87.6600
+epoch: 4, batch: 2100 loss: 0.431, acc: 87.6000
+epoch: 4, batch: 2200 loss: 0.428, acc: 87.6400
+epoch: 4, batch: 2300 loss: 0.432, acc: 87.7300
+epoch 4 开始验证...
+correct number:  49866
+totol number: 59092
+第4个epoch的识别准确率为：84%
+epoch4 结束, 正在保存模型...
+epoch 5 开始训练...
+epoch: 5, batch: 100 loss: 0.376, acc: 88.9900
+epoch: 5, batch: 200 loss: 0.398, acc: 88.6400
+epoch: 5, batch: 300 loss: 0.375, acc: 89.2500
+epoch: 5, batch: 400 loss: 0.396, acc: 88.8700
+epoch: 5, batch: 500 loss: 0.379, acc: 89.0000
+epoch: 5, batch: 600 loss: 0.396, acc: 88.7400
+epoch: 5, batch: 700 loss: 0.390, acc: 88.6900
+epoch: 5, batch: 800 loss: 0.379, acc: 88.9500
+epoch: 5, batch: 900 loss: 0.379, acc: 89.0000
+epoch: 5, batch: 1000 loss: 0.380, acc: 89.0600
+epoch: 5, batch: 1100 loss: 0.372, acc: 89.0300
+epoch: 5, batch: 1200 loss: 0.385, acc: 88.9700
+epoch: 5, batch: 1300 loss: 0.376, acc: 88.9700
+epoch: 5, batch: 1400 loss: 0.391, acc: 88.6000
+epoch: 5, batch: 1500 loss: 0.384, acc: 89.2800
+epoch: 5, batch: 1600 loss: 0.381, acc: 89.2200
+epoch: 5, batch: 1700 loss: 0.387, acc: 88.9600
+epoch: 5, batch: 1800 loss: 0.370, acc: 89.4600
+epoch: 5, batch: 1900 loss: 0.391, acc: 88.6200
+epoch: 5, batch: 2000 loss: 0.391, acc: 88.5700
+epoch: 5, batch: 2100 loss: 0.382, acc: 88.4100
+epoch: 5, batch: 2200 loss: 0.382, acc: 88.7500
+epoch: 5, batch: 2300 loss: 0.371, acc: 88.9800
+epoch 5 开始验证...
+correct number:  50754
+totol number: 59092
+第5个epoch的识别准确率为：85%
+epoch5 结束, 正在保存模型...
+epoch 6 开始训练...
+epoch: 6, batch: 100 loss: 0.327, acc: 90.5300
+epoch: 6, batch: 200 loss: 0.323, acc: 89.9200
+epoch: 6, batch: 300 loss: 0.343, acc: 89.9100
+epoch: 6, batch: 400 loss: 0.330, acc: 90.4200
+epoch: 6, batch: 500 loss: 0.323, acc: 90.6300
+epoch: 6, batch: 600 loss: 0.325, acc: 90.5600
+epoch: 6, batch: 700 loss: 0.332, acc: 90.2300
+epoch: 6, batch: 800 loss: 0.337, acc: 90.2300
+epoch: 6, batch: 900 loss: 0.336, acc: 90.1000
+epoch: 6, batch: 1000 loss: 0.334, acc: 90.1600
+epoch: 6, batch: 1100 loss: 0.340, acc: 90.0600
+epoch: 6, batch: 1200 loss: 0.334, acc: 90.0300
+epoch: 6, batch: 1300 loss: 0.347, acc: 89.9300
+epoch: 6, batch: 1400 loss: 0.346, acc: 90.0500
+epoch: 6, batch: 1500 loss: 0.334, acc: 90.2200
+epoch: 6, batch: 1600 loss: 0.337, acc: 90.2900
+epoch: 6, batch: 1700 loss: 0.340, acc: 89.8400
+epoch: 6, batch: 1800 loss: 0.337, acc: 90.2700
+epoch: 6, batch: 1900 loss: 0.317, acc: 90.4600
+epoch: 6, batch: 2000 loss: 0.333, acc: 90.2500
+epoch: 6, batch: 2100 loss: 0.341, acc: 90.0200
+epoch: 6, batch: 2200 loss: 0.340, acc: 90.2000
+epoch: 6, batch: 2300 loss: 0.331, acc: 90.5600
+epoch 6 开始验证...
+correct number:  51218
+totol number: 59092
+第6个epoch的识别准确率为：86%
+epoch6 结束, 正在保存模型...
+epoch 7 开始训练...
+epoch: 7, batch: 100 loss: 0.279, acc: 91.7900
+epoch: 7, batch: 200 loss: 0.280, acc: 91.7300
+epoch: 7, batch: 300 loss: 0.299, acc: 90.9600
+epoch: 7, batch: 400 loss: 0.285, acc: 91.4900
+epoch: 7, batch: 500 loss: 0.297, acc: 91.3700
+epoch: 7, batch: 600 loss: 0.298, acc: 91.2900
+epoch: 7, batch: 700 loss: 0.305, acc: 90.9400
+epoch: 7, batch: 800 loss: 0.287, acc: 91.5200
+epoch: 7, batch: 900 loss: 0.298, acc: 91.2800
+epoch: 7, batch: 1000 loss: 0.292, acc: 91.3400
+epoch: 7, batch: 1100 loss: 0.306, acc: 91.0600
+epoch: 7, batch: 1200 loss: 0.304, acc: 91.0100
+epoch: 7, batch: 1300 loss: 0.292, acc: 91.4700
+epoch: 7, batch: 1400 loss: 0.291, acc: 91.4400
+epoch: 7, batch: 1500 loss: 0.308, acc: 90.4600
+epoch: 7, batch: 1600 loss: 0.296, acc: 91.3200
+epoch: 7, batch: 1700 loss: 0.298, acc: 91.0600
+epoch: 7, batch: 1800 loss: 0.314, acc: 90.7100
+epoch: 7, batch: 1900 loss: 0.296, acc: 91.2500
+epoch: 7, batch: 2000 loss: 0.306, acc: 91.0500
+epoch: 7, batch: 2100 loss: 0.283, acc: 91.8100
+epoch: 7, batch: 2200 loss: 0.293, acc: 91.4900
+epoch: 7, batch: 2300 loss: 0.328, acc: 90.1900
+epoch 7 开始验证...
+correct number:  51514
+totol number: 59092
+第7个epoch的识别准确率为：87%
+epoch7 结束, 正在保存模型...
+epoch 8 开始训练...
+epoch: 8, batch: 100 loss: 0.263, acc: 92.1600
+epoch: 8, batch: 200 loss: 0.272, acc: 92.1100
+epoch: 8, batch: 300 loss: 0.260, acc: 92.3000
+epoch: 8, batch: 400 loss: 0.261, acc: 92.3500
+epoch: 8, batch: 500 loss: 0.267, acc: 91.8600
+epoch: 8, batch: 600 loss: 0.274, acc: 92.0800
+epoch: 8, batch: 700 loss: 0.267, acc: 92.0800
+epoch: 8, batch: 800 loss: 0.269, acc: 91.8100
+epoch: 8, batch: 900 loss: 0.271, acc: 91.9800
+epoch: 8, batch: 1000 loss: 0.273, acc: 91.4000
+epoch: 8, batch: 1100 loss: 0.257, acc: 92.3100
+epoch: 8, batch: 1200 loss: 0.250, acc: 92.8100
+epoch: 8, batch: 1300 loss: 0.274, acc: 91.6300
+epoch: 8, batch: 1400 loss: 0.275, acc: 91.9800
+epoch: 8, batch: 1500 loss: 0.274, acc: 92.2000
+epoch: 8, batch: 1600 loss: 0.277, acc: 91.9000
+epoch: 8, batch: 1700 loss: 0.271, acc: 91.6000
+epoch: 8, batch: 1800 loss: 0.266, acc: 91.9200
+epoch: 8, batch: 1900 loss: 0.272, acc: 91.9800
+epoch: 8, batch: 2000 loss: 0.274, acc: 91.8500
+epoch: 8, batch: 2100 loss: 0.255, acc: 92.5700
+epoch: 8, batch: 2200 loss: 0.274, acc: 91.5600
+epoch: 8, batch: 2300 loss: 0.257, acc: 91.9400
+epoch 8 开始验证...
+correct number:  51781
+totol number: 59092
+第8个epoch的识别准确率为：87%
+epoch8 结束, 正在保存模型...
+epoch 9 开始训练...
+epoch: 9, batch: 100 loss: 0.227, acc: 93.4800
+epoch: 9, batch: 200 loss: 0.235, acc: 93.0000
+epoch: 9, batch: 300 loss: 0.243, acc: 92.8200
+epoch: 9, batch: 400 loss: 0.235, acc: 92.9700
+epoch: 9, batch: 500 loss: 0.238, acc: 92.3600
+epoch: 9, batch: 600 loss: 0.243, acc: 92.5900
+epoch: 9, batch: 700 loss: 0.241, acc: 92.7700
+epoch: 9, batch: 800 loss: 0.252, acc: 92.5100
+epoch: 9, batch: 900 loss: 0.237, acc: 93.1400
+epoch: 9, batch: 1000 loss: 0.244, acc: 92.3100
+epoch: 9, batch: 1100 loss: 0.252, acc: 92.6200
+epoch: 9, batch: 1200 loss: 0.251, acc: 92.4800
+epoch: 9, batch: 1300 loss: 0.236, acc: 93.3700
+epoch: 9, batch: 1400 loss: 0.237, acc: 92.8100
+epoch: 9, batch: 1500 loss: 0.238, acc: 92.7500
+epoch: 9, batch: 1600 loss: 0.252, acc: 92.3300
+epoch: 9, batch: 1700 loss: 0.241, acc: 92.7500
+epoch: 9, batch: 1800 loss: 0.254, acc: 92.2900
+epoch: 9, batch: 1900 loss: 0.248, acc: 92.4500
+epoch: 9, batch: 2000 loss: 0.261, acc: 91.9600
+epoch: 9, batch: 2100 loss: 0.249, acc: 92.2300
+epoch: 9, batch: 2200 loss: 0.266, acc: 92.1100
+epoch: 9, batch: 2300 loss: 0.248, acc: 92.5300
+epoch 9 开始验证...
+correct number:  51944
+totol number: 59092
+第9个epoch的识别准确率为：87%
+epoch9 结束, 正在保存模型...
+epoch 10 开始训练...
+epoch: 10, batch: 100 loss: 0.214, acc: 93.4400
+epoch: 10, batch: 200 loss: 0.223, acc: 93.1300
+epoch: 10, batch: 300 loss: 0.222, acc: 93.5400
+epoch: 10, batch: 400 loss: 0.220, acc: 93.4400
+epoch: 10, batch: 500 loss: 0.224, acc: 93.3100
+epoch: 10, batch: 600 loss: 0.218, acc: 93.3800
+epoch: 10, batch: 700 loss: 0.227, acc: 93.2200
+epoch: 10, batch: 800 loss: 0.222, acc: 93.2900
+epoch: 10, batch: 900 loss: 0.225, acc: 93.4000
+epoch: 10, batch: 1000 loss: 0.227, acc: 93.2800
+epoch: 10, batch: 1100 loss: 0.224, acc: 93.1700
+epoch: 10, batch: 1200 loss: 0.220, acc: 93.4100
+epoch: 10, batch: 1300 loss: 0.230, acc: 93.0200
+epoch: 10, batch: 1400 loss: 0.223, acc: 92.9300
+epoch: 10, batch: 1500 loss: 0.231, acc: 92.7100
+epoch: 10, batch: 1600 loss: 0.231, acc: 92.7800
+epoch: 10, batch: 1700 loss: 0.226, acc: 93.0700
+epoch: 10, batch: 1800 loss: 0.227, acc: 92.9100
+epoch: 10, batch: 1900 loss: 0.229, acc: 93.0500
+epoch: 10, batch: 2000 loss: 0.226, acc: 93.3000
+epoch: 10, batch: 2100 loss: 0.218, acc: 93.2400
+epoch: 10, batch: 2200 loss: 0.225, acc: 93.0600
+epoch: 10, batch: 2300 loss: 0.229, acc: 93.1000
+epoch 10 开始验证...
+correct number:  52180
+totol number: 59092
+第10个epoch的识别准确率为：88%
+epoch10 结束, 正在保存模型...
+epoch 11 开始训练...
+epoch: 11, batch: 100 loss: 0.193, acc: 94.0200
+epoch: 11, batch: 200 loss: 0.204, acc: 93.8700
+epoch: 11, batch: 300 loss: 0.194, acc: 94.1700
+epoch: 11, batch: 400 loss: 0.205, acc: 93.9600
+epoch: 11, batch: 500 loss: 0.200, acc: 93.9200
+epoch: 11, batch: 600 loss: 0.212, acc: 93.6000
+epoch: 11, batch: 700 loss: 0.207, acc: 93.7200
+epoch: 11, batch: 800 loss: 0.206, acc: 93.8000
+epoch: 11, batch: 900 loss: 0.193, acc: 94.4700
+epoch: 11, batch: 1000 loss: 0.201, acc: 93.7800
+epoch: 11, batch: 1100 loss: 0.216, acc: 93.4400
+epoch: 11, batch: 1200 loss: 0.206, acc: 93.8300
+epoch: 11, batch: 1300 loss: 0.217, acc: 93.1900
+epoch: 11, batch: 1400 loss: 0.205, acc: 93.9200
+epoch: 11, batch: 1500 loss: 0.190, acc: 94.1000
+epoch: 11, batch: 1600 loss: 0.194, acc: 94.1000
+epoch: 11, batch: 1700 loss: 0.208, acc: 93.8100
+epoch: 11, batch: 1800 loss: 0.207, acc: 93.6000
+epoch: 11, batch: 1900 loss: 0.201, acc: 93.9200
+epoch: 11, batch: 2000 loss: 0.216, acc: 93.3700
+epoch: 11, batch: 2100 loss: 0.211, acc: 93.7400
+epoch: 11, batch: 2200 loss: 0.217, acc: 93.4900
+epoch: 11, batch: 2300 loss: 0.216, acc: 93.2100
+epoch 11 开始验证...
+correct number:  52237
+totol number: 59092
+第11个epoch的识别准确率为：88%
+epoch11 结束, 正在保存模型...
+epoch 12 开始训练...
+epoch: 12, batch: 100 loss: 0.190, acc: 94.3100
+epoch: 12, batch: 200 loss: 0.175, acc: 94.7900
+epoch: 12, batch: 300 loss: 0.191, acc: 94.5100
+epoch: 12, batch: 400 loss: 0.185, acc: 94.5300
+epoch: 12, batch: 500 loss: 0.179, acc: 94.4900
+epoch: 12, batch: 600 loss: 0.190, acc: 94.2000
+epoch: 12, batch: 700 loss: 0.196, acc: 93.8900
+epoch: 12, batch: 800 loss: 0.191, acc: 94.2200
+epoch: 12, batch: 900 loss: 0.185, acc: 94.2400
+epoch: 12, batch: 1000 loss: 0.185, acc: 94.3900
+epoch: 12, batch: 1100 loss: 0.189, acc: 94.2900
+epoch: 12, batch: 1200 loss: 0.192, acc: 94.3000
+epoch: 12, batch: 1300 loss: 0.192, acc: 94.3100
+epoch: 12, batch: 1400 loss: 0.191, acc: 94.3600
+epoch: 12, batch: 1500 loss: 0.199, acc: 94.0300
+epoch: 12, batch: 1600 loss: 0.195, acc: 94.0400
+epoch: 12, batch: 1700 loss: 0.184, acc: 94.3700
+epoch: 12, batch: 1800 loss: 0.208, acc: 93.8400
+epoch: 12, batch: 1900 loss: 0.192, acc: 93.9000
+epoch: 12, batch: 2000 loss: 0.193, acc: 94.2100
+epoch: 12, batch: 2100 loss: 0.189, acc: 94.3300
+epoch: 12, batch: 2200 loss: 0.188, acc: 94.0800
+epoch: 12, batch: 2300 loss: 0.193, acc: 94.1100
+epoch 12 开始验证...
+correct number:  52385
+totol number: 59092
+第12个epoch的识别准确率为：88%
+epoch12 结束, 正在保存模型...
+epoch 13 开始训练...
+epoch: 13, batch: 100 loss: 0.178, acc: 94.5300
+epoch: 13, batch: 200 loss: 0.170, acc: 94.7100
+epoch: 13, batch: 300 loss: 0.170, acc: 95.0700
+epoch: 13, batch: 400 loss: 0.178, acc: 94.6600
+epoch: 13, batch: 500 loss: 0.175, acc: 94.6700
+epoch: 13, batch: 600 loss: 0.169, acc: 94.7800
+epoch: 13, batch: 700 loss: 0.165, acc: 94.5900
+epoch: 13, batch: 800 loss: 0.168, acc: 94.7500
+epoch: 13, batch: 900 loss: 0.174, acc: 94.7500
+epoch: 13, batch: 1000 loss: 0.174, acc: 94.5000
+epoch: 13, batch: 1100 loss: 0.177, acc: 94.5000
+epoch: 13, batch: 1200 loss: 0.174, acc: 94.7200
+epoch: 13, batch: 1300 loss: 0.173, acc: 94.8400
+epoch: 13, batch: 1400 loss: 0.174, acc: 94.5500
+epoch: 13, batch: 1500 loss: 0.180, acc: 94.6000
+epoch: 13, batch: 1600 loss: 0.172, acc: 94.7400
+epoch: 13, batch: 1700 loss: 0.185, acc: 94.1500
+epoch: 13, batch: 1800 loss: 0.170, acc: 94.7600
+epoch: 13, batch: 1900 loss: 0.178, acc: 94.4600
+epoch: 13, batch: 2000 loss: 0.185, acc: 94.5300
+epoch: 13, batch: 2100 loss: 0.188, acc: 93.9800
+epoch: 13, batch: 2200 loss: 0.191, acc: 94.1700
+epoch: 13, batch: 2300 loss: 0.182, acc: 94.3400
+epoch 13 开始验证...
+correct number:  52380
+totol number: 59092
+第13个epoch的识别准确率为：88%
+epoch13 结束, 正在保存模型...
+epoch 14 开始训练...
+epoch: 14, batch: 100 loss: 0.153, acc: 95.5700
+epoch: 14, batch: 200 loss: 0.153, acc: 95.6600
+epoch: 14, batch: 300 loss: 0.158, acc: 95.1300
+epoch: 14, batch: 400 loss: 0.161, acc: 94.9100
+epoch: 14, batch: 500 loss: 0.166, acc: 95.0700
+epoch: 14, batch: 600 loss: 0.167, acc: 94.9300
+epoch: 14, batch: 700 loss: 0.166, acc: 94.7000
+epoch: 14, batch: 800 loss: 0.160, acc: 95.3800
+epoch: 14, batch: 900 loss: 0.167, acc: 95.0000
+epoch: 14, batch: 1000 loss: 0.154, acc: 95.2400
+epoch: 14, batch: 1100 loss: 0.165, acc: 95.0200
+epoch: 14, batch: 1200 loss: 0.151, acc: 95.4400
+epoch: 14, batch: 1300 loss: 0.165, acc: 94.8900
+epoch: 14, batch: 1400 loss: 0.168, acc: 95.0400
+epoch: 14, batch: 1500 loss: 0.167, acc: 94.7700
+epoch: 14, batch: 1600 loss: 0.169, acc: 94.9400
+epoch: 14, batch: 1700 loss: 0.167, acc: 94.7400
+epoch: 14, batch: 1800 loss: 0.168, acc: 94.7800
+epoch: 14, batch: 1900 loss: 0.169, acc: 94.6700
+epoch: 14, batch: 2000 loss: 0.166, acc: 94.5100
+epoch: 14, batch: 2100 loss: 0.169, acc: 94.9500
+epoch: 14, batch: 2200 loss: 0.165, acc: 95.0700
+epoch: 14, batch: 2300 loss: 0.165, acc: 94.9300
+epoch 14 开始验证...
+correct number:  52619
+totol number: 59092
+第14个epoch的识别准确率为：89%
+epoch14 结束, 正在保存模型...
+epoch 15 开始训练...
+epoch: 15, batch: 100 loss: 0.144, acc: 95.6500
+epoch: 15, batch: 200 loss: 0.145, acc: 95.6400
+epoch: 15, batch: 300 loss: 0.145, acc: 95.6000
+epoch: 15, batch: 400 loss: 0.148, acc: 95.5000
+epoch: 15, batch: 500 loss: 0.150, acc: 95.5100
+epoch: 15, batch: 600 loss: 0.150, acc: 95.4200
+epoch: 15, batch: 700 loss: 0.154, acc: 95.3300
+epoch: 15, batch: 800 loss: 0.166, acc: 95.1300
+epoch: 15, batch: 900 loss: 0.147, acc: 95.3300
+epoch: 15, batch: 1000 loss: 0.146, acc: 95.5600
+epoch: 15, batch: 1100 loss: 0.154, acc: 95.3100
+epoch: 15, batch: 1200 loss: 0.149, acc: 95.8400
+epoch: 15, batch: 1300 loss: 0.147, acc: 95.4800
+epoch: 15, batch: 1400 loss: 0.160, acc: 95.0600
+epoch: 15, batch: 1500 loss: 0.155, acc: 95.4600
+epoch: 15, batch: 1600 loss: 0.151, acc: 95.3900
+epoch: 15, batch: 1700 loss: 0.161, acc: 95.1900
+epoch: 15, batch: 1800 loss: 0.156, acc: 95.2000
+epoch: 15, batch: 1900 loss: 0.153, acc: 95.0000
+epoch: 15, batch: 2000 loss: 0.158, acc: 95.1600
+epoch: 15, batch: 2100 loss: 0.167, acc: 94.8600
+epoch: 15, batch: 2200 loss: 0.158, acc: 95.2400
+epoch: 15, batch: 2300 loss: 0.159, acc: 94.9900
+epoch 15 开始验证...
+correct number:  52635
+totol number: 59092
+第15个epoch的识别准确率为：89%
+epoch15 结束, 正在保存模型...
+epoch 16 开始训练...
+epoch: 16, batch: 100 loss: 0.138, acc: 95.7400
+epoch: 16, batch: 200 loss: 0.135, acc: 96.2300
+epoch: 16, batch: 300 loss: 0.132, acc: 96.1400
+epoch: 16, batch: 400 loss: 0.140, acc: 95.7400
+epoch: 16, batch: 500 loss: 0.131, acc: 96.0200
+epoch: 16, batch: 600 loss: 0.124, acc: 96.1700
+epoch: 16, batch: 700 loss: 0.134, acc: 95.9600
+epoch: 16, batch: 800 loss: 0.137, acc: 95.8500
